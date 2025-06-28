@@ -1,0 +1,91 @@
+* {
+    /*Reset CSS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: blue;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: blueviolet;
+    padding-left: 20px;
+    font-family: cursive;
+}
+
+a {
+    text-decoration-line: none;
+}
+p {
+    color: green;
+    padding-left: 20px;
+}
+/*Formato texto exclusifo para historia index*/
+.historia {
+    font-weight: 1000;
+}
+
+/*Formato Texto exclusivo para parafo footter*/
+.p-footer {
+    color: black;
+}
+
+/*estilo logo*/
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.caja {
+    width: 50%;
+    height: 50vh;
+    background-color: aqua;
+    border: 2px solid blue;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: row;
+}
+
+.navbar {
+    background-color: aquamarine;
+    justify-content: end;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: center;
+    justify-items: start;
+    justify-content: space-around;
+    align-content: space-between;
+}
