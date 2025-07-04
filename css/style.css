@@ -152,7 +152,7 @@ p {
 /*-----------------------INICIO ESTILOS BODY-----------------------------*/
 html,
 body {
-	background-image: url(/image/fondo-escritorio.webp);
+	background-image: url(/image/fondo.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
