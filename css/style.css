@@ -1,91 +1,360 @@
+/* Reset general */
 * {
-    /*Reset CSS*/
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	/*Reset CSS*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*-----------------------TIPOGRAFÍA Y TEXTO GENERAL-----------------------------*/
+
+body {
+	font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-    color: blue;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: sans-serif;
+	color: white;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 3rem;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.h1--precios {
+	font-size: 1rem;
 }
 
 h2 {
-    color: blueviolet;
-    padding-left: 20px;
-    font-family: cursive;
+	color: white;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 2rem;
+	margin-top: 1rem;
 }
 
 a {
-    text-decoration-line: none;
+	text-decoration: none;
 }
+
 p {
-    color: green;
-    padding-left: 20px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 }
-/*Formato texto exclusifo para historia index*/
+
+.p--precios {
+	margin-top: auto;
+	font-size: 0.8rem;
+	font-weight: 100;
+}
+
 .historia {
-    font-weight: 1000;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 1rem;
+	max-width: 600px;
+	margin-top: 0.5rem;
 }
 
-/*Formato Texto exclusivo para parafo footter*/
 .p-footer {
-    color: black;
+	color: black;
 }
 
-/*estilo logo*/
-.logo {
-    width: 50px;
-    height: auto;
-}
-
-.caja {
-    width: 50%;
-    height: 50vh;
-    background-color: aqua;
-    border: 2px solid blue;
-    text-align: center;
-    line-height: 100px;
-    margin: 10px;
-    flex-grow: 1;
-}
-
-.contenedor {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    flex-direction: row;
-}
+/*-----------------------INICIO ESTILOS NAVBAR-----------------------------*/
 
 .navbar {
-    background-color: aquamarine;
-    justify-content: end;
+	background-color: #111311;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 }
 
-.navbar ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
+.navbar__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.navbar li {
-    margin: 0 15px;
+.navbar__logo {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
-.navbar a {
-    color: #fff;
-    padding: 15px 20px;
-    display: block;
+.navbar__logo img {
+	height: 100px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 100px);
-    justify-items: center;
-    justify-items: start;
-    justify-content: space-around;
-    align-content: space-between;
+.navbar__marca {
+	color: white;
+	font-size: 1.2rem;
+	line-height: 1.1;
 }
+
+.navbar__list {
+	margin-right: 4rem;
+}
+
+.navbar__list li a {
+	color: white;
+	font-weight: bold;
+}
+
+.navbar__list li a:hover {
+	text-decoration: underline;
+}
+
+.navbar__toggle {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+}
+
+/* Inicio Modo móvil */
+@media (max-width: 991px) {
+	.navbar__list {
+		display: none;
+		flex-direction: column;
+		background-color: #111311;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		padding: 1rem 2rem;
+	}
+
+	.navbar__list.active {
+		display: flex;
+	}
+
+	.navbar__toggle {
+		display: block;
+		margin-left: auto;
+	}
+
+	.navbar__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+	}
+}
+/*Fin Modo móvil */
+
+/*-----------------------FIN ESTILOS NAVBAR-----------------------------*/
+
+/*-----------------------INICIO ESTILOS BODY-----------------------------*/
+html,
+body {
+	background-image: url(/image/fondo-escritorio.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: #0e0f11; /* Color de respaldo */
+}
+
+.contenido {
+	flex: 1;
+}
+
+.container {
+	margin-top: 4rem;
+	margin-bottom: 15rem;
+}
+/*-----------------------FIN ESTILOS BODY-----------------------------*/
+
+/*-----------------------INICIO ESTILOS SERVICIOS-----------------------------*/
+.servicio p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.9rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	text-transform: uppercase;
+}
+
+.btn-servicios {
+	display: inline-block;
+	padding: 0.8rem 1.5rem;
+	background-color: #000;
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 2px solid #ff6961; /* rojo suave */
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	font-size: 1rem;
+}
+
+.btn-servicios:hover {
+	background-color: #ff6961;
+	color: #000;
+}
+
+.servicios {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	padding: 2rem;
+	margin-top: 6rem;
+	background: transparent;
+	flex-wrap: wrap;
+}
+
+.servicios--centrado {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	padding: 2rem;
+	margin-top: 6rem;
+	background: transparent;
+	flex-wrap: wrap;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.servicio {
+	background-color: #2c2c2c;
+	border-radius: 1rem;
+	padding: 2rem;
+	width: calc(33.333% - 2rem);
+	max-width: 220px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	transition: transform 0.2s;
+}
+
+.servicio--precios {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.servicio img {
+	width: 60px;
+	margin-bottom: 1rem;
+}
+.servicio--pic img {
+	width: 150px;
+	margin-bottom: 1rem;
+}
+.servicio:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+	.servicio {
+		width: calc(50% - 2rem);
+	}
+}
+
+@media (max-width: 576px) {
+	.servicio {
+		width: 100%;
+	}
+}
+/*-----------------------FIN ESTILOS SERVICIOS-----------------------------*/
+
+/*-----------------------INICIO ESTILOS MODAL-----------------------------*/
+/* Se utilizaron los mismos estilos de .btn-servicios para mantener coherencia visual */
+/* Se deja espacio para agregar futuros estilos de modal*/
+
+/*-----------------------FIN ESTILOS MODAL-----------------------------*/
+
+/*-----------------------INICIO ESTILOS FOTTER-----------------------------*/
+.footer {
+	background-color: #121212;
+	color: white;
+	text-align: center;
+	padding: 2rem 1rem;
+}
+
+.footer__texto {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.icons__socialmedia a {
+	color: white;
+	font-size: 2rem;
+	margin: 0 1rem;
+	transition: color 0.3s ease;
+	text-decoration: none;
+}
+
+.social-icons a:hover {
+	color: #aaa;
+}
+/*-----------------------FIN ESTILOS FOTTER-----------------------------*/
+
+/*-----------------------INICIO ESTILOS CONTACTO-----------------------------*/
+
+.contacto {
+	color: white;
+}
+
+.contacto__encabezado {
+	margin-bottom: 2rem;
+}
+
+.contacto__titulo {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.contacto__descripcion {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.1rem;
+	line-height: 1.6;
+}
+
+.contacto__contenido {
+	align-items: flex-start;
+}
+
+.contacto__formulario .formulario-contacto {
+	background-color: #2c2c2c;
+}
+
+.formulario-contacto__input,
+.formulario-contacto__textarea {
+	background-color: #1c1c1c;
+	border: 1px solid #444;
+	color: white;
+	font-weight: 600;
+}
+
+.formulario-contacto__input::placeholder,
+.formulario-contacto__textarea::placeholder {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.contacto__info {
+	color: white;
+	font-size: 1.1rem;
+}
+
+.contacto__dato i {
+	color: white;
+}
+
+/*-----------------------FIN ESTILOS CONTACTO-----------------------------*/

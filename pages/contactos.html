@@ -1,48 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <title>Contactos</title>
-    </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Carga el CSS de Bootstrap 5 para estilos rápidos y responsivos -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Carga el JavaScript de Bootstrap 5 para funcionalidades como el menú móvil -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			defer
+		></script>
+		<!-- Carga la librería de íconos Font Awesome para usar íconos de redes sociales -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+		<!-- Carga estilos locales-->
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Contactos</title>
+	</head>
 
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <a href="../index.html"
-                        ><img src="../image/logo.png" alt="Soldaduras Martínez" class="logo"
-                    /></a>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="precios.html">Precios</a></li>
-                    <li>
-                        <a href="sobre_nosotros.html">Sobre Nosotros</a>
-                    </li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>Contacto</h1>
-            <form action="#" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" /><br />
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg bg-dark px-4">
+				<div class="navbar__container container-fluid">
+					<!-- Logo + texto -->
+					<a
+						class="d-flex align-items-center text-white navbar__logo"
+						href="../index.html"
+					>
+						<img
+							src="../icons/logo-sm.svg"
+							alt="Logo"
+							class="logo me-2"
+						/>
+						<div>
+							<strong>SOLDADURAS</strong><br />
+							<span>MARTÍNEZ</span>
+						</div>
+					</a>
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" /> <br />
+					<!-- Botón hamburguesa -->
+					<button
+						class="navbar-toggler text-white"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarMenu"
+						aria-controls="navbarMenu"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-                <label for="telefono">Telefono:</label>
-                <input type="text" id="telefono" name="telefono" /><br />
+					<!-- Enlaces -->
+					<div class="collapse navbar-collapse" id="navbarMenu">
+						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a
+									class="nav-link fw-bold text-white"
+									href="servicios.html"
+									>Servicios</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link fw-bold text-white"
+									href="precios.html"
+									>Precios</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link fw-bold text-white"
+									href="sobre_nosotros.html"
+									>Sobre Nosotros</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link fw-bold text-white"
+									href="contactos.html"
+									>Contactos</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </main>
-        <footer>
-            <p>
-                &copy; 2025 Soldaduras Martínez | contacto@soldadurasmartinez.cl
-            </p>
-        </footer>
-    </body>
+		<div class="contenido">
+			<main>
+				<main class="contacto container mt-5">
+					<header class="contacto__encabezado">
+						<h1 class="contacto__titulo">Contactos</h1>
+						<p class="contacto__descripcion">
+							Estamos aquí para ayudarte<br />
+							Completa el formulario o comunícate con nosotras a
+							través de Whatsapp, teléfono o correo
+						</p>
+					</header>
+
+					<section class="row contacto__contenido">
+						<!-- Formulario -->
+						<div class="col-md-6 contacto__formulario">
+							<form class="formulario-contacto p-4 rounded-4">
+								<div class="mb-3">
+									<input
+										type="text"
+										class="formulario-contacto__input form-control"
+										placeholder="Nombre completo"
+									/>
+								</div>
+								<div class="mb-3">
+									<input
+										type="email"
+										class="formulario-contacto__input form-control"
+										placeholder="Correo electrónico"
+									/>
+								</div>
+								<div class="mb-3">
+									<input
+										type="text"
+										class="formulario-contacto__input form-control"
+										placeholder="Teléfono (opcional)"
+									/>
+								</div>
+								<div class="mb-3">
+									<textarea
+										class="formulario-contacto__textarea form-control"
+										rows="3"
+										placeholder="Mensaje"
+									></textarea>
+								</div>
+								<button type="submit" class="btn btn-servicios">
+									ENVIAR MENSAJE
+								</button>
+							</form>
+						</div>
+
+						<!-- Información de contacto -->
+						<div
+							class="col-md-6 contacto__info d-flex flex-column justify-content-center gap-4 mt-4 mt-md-0"
+						>
+							<div class="contacto__dato">
+								<i class="fas fa-phone fa-lg me-3"></i>
+								<strong>+56 9 654 6567 66</strong>
+							</div>
+							<div class="contacto__dato">
+								<i class="fas fa-envelope fa-lg me-3"></i>
+								La Paz 1212, Chillán
+							</div>
+							<div class="contacto__dato">
+								<i class="fas fa-location-dot fa-lg me-3"></i>
+								<strong>contacto@smartinez.cl</strong>
+							</div>
+						</div>
+					</section>
+				</main>
+			</main>
+		</div>
+
+		<footer class="footer">
+			<p class="footer__texto">
+				Síguenos para ver nuestro trabajo en tiempo real
+			</p>
+			<div class="icons__socialmedia">
+				<a href="#" target="_blank"
+					><i class="fab fa-facebook-f"></i
+				></a>
+				<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+			</div>
+		</footer>
+	</body>
 </html>
-
